@@ -1,0 +1,17 @@
+resources:
+  jobs:
+    Data_quality_framework_Job_run:
+      name: Data_quality_framework_Job_run
+      tasks:
+        - task_key: dq_job
+          notebook_task:
+            notebook_path: ../notebook/Data Quality and Quarantine framework.ipynb
+            base_parameters:
+              catalog: main
+              schema: meta
+              tables: enrollment,pharmacy_claim
+              Input_file_location_pk: pk_file_volume/pk_files.txt
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
