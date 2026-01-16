@@ -1,7 +1,7 @@
 # This is a Databricks asset bundle definition for DQ_framework_bundle.
 # See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
 bundle:
-  name: DQ_framework_bundle
+  name: dq-framework-proj-02
   uuid: 2b4bd202-18f4-4d42-9d3c-c60e24058ccd
 
 include:
