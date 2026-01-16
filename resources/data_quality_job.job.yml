@@ -1,7 +1,7 @@
 resources:
   jobs:
-    Data_quality_framework_Job_run:
-      name: Data_quality_framework_Job_run
+    data_quality_framework_Job_run_01:
+      name: data_quality_framework_Job_run_01
       tasks:
         - task_key: dq_job
           notebook_task:
