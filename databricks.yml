@@ -32,8 +32,10 @@ targets:
     mode: production
     workspace:
       host: https://dbc-f44b7713-51af.cloud.databricks.com
+      #host: https://dbc-cb3019ce-889c.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/abhijeet.kumar12@tcs.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/abhijeet.kumar12@tcs.com/PROD/.bundle/${bundle.name}/${bundle.target}
+      # 
+      root_path: /Workspace/Users/abhijeet.kumar12@tcs.com/PROD/
     variables:
       catalog: main
       schema: prod
