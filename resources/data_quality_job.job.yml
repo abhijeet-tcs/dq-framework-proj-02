@@ -1,11 +1,12 @@
 resources:
-  jobs: data_quality_framework_Job_run_01
+  jobs:
+    data_quality_framework_Job_run_01:
       name: data_quality_framework_Job_run_01
       tasks:
-        - task_key: sample
-          notebook_task:
-            notebook_path: ../notebook/sample.ipynb
-            source: WORKSPACE
+#        - task_key: sample
+#          notebook_task:
+#            notebook_path: ../notebook/sample.ipynb
+#            source: WORKSPACE
         - task_key: dq_job
           notebook_task:
             notebook_path: ../notebook/Data Quality and Quarantine framework.ipynb
@@ -15,7 +16,7 @@ resources:
               tables: enrollment,pharmacy_claim
               Input_file_location_pk: pk_file_volume/pk_files.txt
             source: WORKSPACE
-          depends_on: [sample]     
+#          depends_on: [sample]     
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZED
