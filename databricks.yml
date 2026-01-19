@@ -35,10 +35,12 @@ targets:
       #host: https://dbc-cb3019ce-889c.cloud.databricks.com
       # We explicitly deploy to /Workspace/Users/abhijeet.kumar12@tcs.com to make sure we only have a single copy.
       # 
-      root_path: /Workspace/Users/abhijeet.kumar12@tcs.com/PROD/
+      #root_path: /Workspace/Users/abhijeet.kumar12@tcs.com/PROD/
+      root_path: /Workspace/Users/${workspace.current_user.userName}/${bundle.name}/${bundle.target}
     variables:
       catalog: main
       schema: prod
     permissions:
-      - user_name: abhijeet.kumar12@tcs.com
+      #- user_name: abhijeet.kumar12@tcs.com
+      - user_name: ${workspace.current_user.userName}
         level: CAN_MANAGE
