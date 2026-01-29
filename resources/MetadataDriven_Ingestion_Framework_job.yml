@@ -1,0 +1,16 @@
+#Test Changes
+#Test changes2
+resources:
+  jobs:
+    MetadataDriven_Ingestion_Framework_job_run_01:
+      name: MetadataDriven_Ingestion_Framework_job_run_01
+      tasks:
+        - task_key: metadata_job
+          notebook_task:
+            notebook_path: ../notebook/MetadataDriven_Ingestion_Framework.ipynb
+            base_parameters:
+              connection_type: batch
+            source: WORKSPACE  
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
